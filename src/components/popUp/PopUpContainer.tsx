@@ -2,7 +2,7 @@ import React from 'react';
 import { createPortal } from 'react-dom';
 import { useSelector } from 'react-redux';
 import { popUpSelector } from '../../store/popUp-slice';
-import usePopUp from './usePopUp';
+import usePopUp from '../../hooks/usePopUp';
 
 import PopUpA from './PopUpA';
 import PopUpB from './PopUpB';

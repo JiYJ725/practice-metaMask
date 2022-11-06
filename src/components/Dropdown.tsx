@@ -107,10 +107,10 @@ const OptionList = styled.ul<{ isOpened: boolean; scroll: boolean }>`
   border-radius: 3px;
   padding: 0;
   position: absolute;
-  width: 100%;
-  height: ${({ scroll }) => (scroll ? '450px' : 'fit-content')}
   z-index: 2;
   ${({ scroll }) => scroll && 'overflow-y: scroll;'}
+  width: 100%;
+  height: ${({ scroll }) => (scroll ? '450px' : 'fit-content')};
 `;
 
 const Option = styled.li<{ isActive: boolean }>`

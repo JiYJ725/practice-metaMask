@@ -2,7 +2,7 @@ import PopUpTemplate from './PopUpTemplate';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import { popUpSelector } from '../../store/popUp-slice';
-import usePopUp from './usePopUp';
+import usePopUp from '../../hooks/usePopUp';
 import React from 'react';
 
 interface IPopUpProps {

@@ -1,46 +1,19 @@
-# Getting Started with Create React App
+## 기술스택
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- CRA
+- typescript
+- styled-component
+- redux-toolkit
 
-## Available Scripts
+## 요구사항
 
-In the project directory, you can run:
+- 데이터 수에 따라 유연하게 표출되는 드롭다운 만들기
+- 여러개의 모달을 띄울 수 있는 모달 컴포넌트 만들기
+- 크롬플러그인(Metamask) 연동해보기
 
-### `npm start`
+### etc
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- PopUpContainer : 팝업을 등록하고, 배열로 등록된 팝업들을 렌더링 해주며 React Portal을 통해 연결시켜준다. 원하는 태그와 연결시켜준다.
+- PopUpTemplate : 팝업의 기본 틀이 되고, react children을 통해 JSXElement를 넘겨받는다.
+- 여러가지 PopUp-Component : PopUpTemplate으로 감싼 후 내부에 원하는 형태로 마크업 하여 사용.
+- useModal : 컴포넌트 내부 코드 간소화를 위해 redux dispatch 로직을 커스텀 훅으로 사용.

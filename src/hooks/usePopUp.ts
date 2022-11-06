@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
-import { openPopUp, closePopUp } from '../../store/popUp-slice';
-import { IPopUp } from '../../store/popUp-slice';
+import { openPopUp, closePopUp } from '../store/popUp-slice';
+import { IPopUp } from '../store/popUp-slice';
 
 const usePopUp = () => {
   const dispatch = useDispatch();
