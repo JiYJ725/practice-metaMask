@@ -13,5 +13,5 @@ const dropBoxSlice = createSlice({
   },
 });
 
-export const DropBoxActions = dropBoxSlice.actions;
+export const { setActiveItem } = dropBoxSlice.actions;
 export default dropBoxSlice;

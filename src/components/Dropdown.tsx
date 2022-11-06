@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { DropBoxActions } from '../store/dropBox-slice';
+import { setActiveItem } from '../store/dropBox-slice';
 import styled from 'styled-components';
 import { TokenInfo } from '../type';
 import { RootState } from '../store';
@@ -25,7 +25,7 @@ const Dropdown = ({ options }: DropdownProps) => {
   useOutSideClick(dropDownRef, closeHandler);
 
   const handleOptionClick = (item: TokenInfo) => {
-    dispatch(DropBoxActions.setActiveItem(item));
+    dispatch(setActiveItem(item));
     updateIsOpened(false);
   };
 
@@ -108,7 +108,7 @@ const OptionList = styled.ul<{ isOpened: boolean; scroll: boolean }>`
   padding: 0;
   position: absolute;
   width: 100%;
-  height: 450px;
+  height: ${({ scroll }) => (scroll ? '450px' : 'fit-content')}
   z-index: 2;
   ${({ scroll }) => scroll && 'overflow-y: scroll;'}
 `;
